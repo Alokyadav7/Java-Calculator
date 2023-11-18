@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class BasicCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Basic Calculator");
+        System.out.println("Enter two numbers:");
+
+        // Input the numbers
+        System.out.print("Enter the first number: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
+
+        // Perform operations
+        double resultAddition = num1 + num2;
+        double resultSubtraction = num1 - num2;
+        double resultMultiplication = num1 * num2;
+        double resultDivision = num1 / num2;
+
+        // Display the results
+        System.out.println("Results:");
+        System.out.println(num1 + " + " + num2 + " = " + resultAddition);
+        System.out.println(num1 + " - " + num2 + " = " + resultSubtraction);
+        System.out.println(num1 + " * " + num2 + " = " + resultMultiplication);
+
+        // Check if the second number is not zero before performing division
+        if (num2 != 0) {
+            System.out.println(num1 + " / " + num2 + " = " + resultDivision);
+        } else {
+            System.out.println("Cannot divide by zero.");
+        }
+
+        scanner.close();
+    }
+}
